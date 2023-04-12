@@ -1,0 +1,130 @@
+:root {
+    /* Spacing */
+    --spacing-large: 32px;
+    --spacing-medium: 16px;
+    --spacing-small: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body > header {
+    background-color: rgb(74, 72, 72);
+    padding: var(--spacing-medium) 0;
+    color: white;
+}
+
+header li {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: var(--spacing-small);
+}
+
+header li a {
+    color: white;
+}
+
+.container {
+    padding: 0 15%;
+}
+
+section {
+    padding: var(--spacing-medium) 0;
+}
+
+section h2,
+.articles article {
+    margin-bottom: var(--spacing-medium);
+}
+
+section h3 {
+    margin: var(--spacing-small) 0;
+}
+
+time {
+    color: gray;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.articles article {
+    width: 30%;
+}
+
+.articles article img {
+    width: 100%;
+}
+
+.articles article a {
+    background-color: blue;
+    color: white;
+    padding: var(--spacing-small);
+    display: inline-block;
+    margin-top: var(--spacing-small);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.articles article a:hover{
+    text-decoration: underline;
+}
+
+.articles article p,
+.articles article a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.articles article h3 {
+    font-size: 24px;
+}
+
+section h2 {
+    font-size: 32px;
+}
+
+#sports {
+    background-color: rgba(166, 221, 166,0.1);
+}
+
+#sports .articles article a {
+    background-color: rgb(56, 143, 56);
+}
+
+#economy {
+    background-color: rgba(235, 235, 67, 0.2);
+}
+
+#economy .articles article a {
+    background-color: rgb(198, 115, 0);
+}
+
+#technology {
+    background-color: rgba(67, 137, 235, 0.2);
+}
+
+#technology .articles article a {
+    background-color: rgb(0, 16, 198);
+}
+
+#politics {
+    background-color: rgba(235, 67, 67, 0.2);
+}
+
+#politics .articles article a {
+    background-color: rgb(198, 0, 0);
+}
