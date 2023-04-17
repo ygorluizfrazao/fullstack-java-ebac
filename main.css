@@ -1,0 +1,124 @@
+:root{
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    --spacing-extra-large: 32px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+}
+
+.container {
+    max-width: 50%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+header{
+    margin-top: var(--spacing-extra-large);
+}
+
+h1 {
+    font-size: 22px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form input{
+    display: block;
+    width: 300px;
+    padding: var(--spacing-small);
+    padding-left: var(--spacing-large);
+}
+
+.input-container{
+    display: flexbox;
+    text-align: start;
+    margin-bottom: var(--spacing-small);
+    position: relative;
+}
+
+#clear-text{
+    display: none;
+    position: absolute;
+    top: 5px;
+}
+
+#data-input{
+    margin-top: var(--spacing-large);
+}
+
+.inputs {
+    width: 100%;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+}
+
+.button {
+    width: 100%;
+    border-radius: 4px;
+    background-color: #01790f;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    padding: var(--spacing-small);
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .button:disabled{
+    background-color: darkgray;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .error-input-message{
+    display: none;
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+    word-wrap: break-word;
+  }
+
+  .success-input{
+    outline: rgb(58, 255, 58);
+    border-color: rgb(63, 255, 63);
+    color: #01790f;
+  }
+
+  .error-input {
+    outline: red;
+    border-color: red;
+    color: red;
+  }

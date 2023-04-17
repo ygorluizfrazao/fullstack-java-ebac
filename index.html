@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio Html JS</title>
+
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Vamos comparar números para mostrar o poder do JavaScript!</h1>
+      </div>
+    </header>
+
+    <section id="data-input">
+      <div class="container">
+        <div class="inputs">
+          <form>
+            <div id="first" class="input-container">
+              <span id="clear-text" class="material-icons"> clear </span>
+              <input
+                id="primeiro-numero"
+                type="number"
+                max="50"
+                min="0"
+                required
+                placeholder="Insira o primeiro número"
+              />
+              <p id="first-error-message" class="error-input-message"></p>
+            </div>
+            <div id="second" class="input-container">
+              <span id="clear-text" class="material-icons"> clear </span>
+              <input
+                id="segundo-numero"
+                type="number"
+                required
+                placeholder="Insira o segundo número"
+              />
+              <p id="second-error-message" class="error-input-message"></p>
+            </div>
+            <div class="input-container">
+              <button id="submit-button" disabled="true" class="button"><span>Verificar</span></button>
+              <p id="submit-error-message" class="error-input-message"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
