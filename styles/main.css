@@ -1,0 +1,101 @@
+@import "./controls/card.css";
+@import "./controls/divider.css";
+@import "./controls/info-box.css";
+@import "./controls/button.css";
+@import "./controls/tooltip.css";
+@import "./controls/chip.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --color-primary: #b4b5b7;
+  --color-secondary: #05177e;
+  --color-tertiary: white;
+  --color-over-primary: black;
+  --color-over-secondary: white;
+  --color-over-tertiary: black;
+  --color-borders: black;
+  --color-over-primary: black;
+  --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  --spacing-xsmall: 4px;
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 32px;
+  --spacing-xlarge: 64px;
+
+  --border-radius: 12px;
+
+  --icon-small: 32px;
+  --icon-medium: 48px;
+  --icon-large: 60px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  background-color: var(--color-primary);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  color: var(--color-over-secondary);
+  padding: var(--spacing-small) var(--spacing-large);
+  background-color: var(--color-secondary);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-medium) 20%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xsmall);
+    background-color: var(--color-secondary);
+    color: var(--color-over-secondary);
+    padding: var(--spacing-large);
+    border-radius: var(--border-radius);
+    min-width: 400px;
+    align-items: center;
+    font-size: 12px;
+}
+
+.card label {
+    align-self: flex-start;
+    font-weight: bold;
+}
+
+.card input {
+    width: 100%;
+    margin-bottom: var(--spacing-small);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-small);
+}
+
+.card input:focus {
+    outline: none;
+    box-shadow: 0 0px 8px 2px var(--color-primary);
+}
+
+.card .divider {
+    background-color: var(--color-over-secondary);
+    opacity: 90%;
+    margin: var(--spacing-medium) 0px;
+}
+
+.button {
+    align-self: flex-end;
+    background-color: green;
+    width: fit-content;
+    font-size: 12px;
+}
