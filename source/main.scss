@@ -1,0 +1,111 @@
+@use "constants";
+@use "reset";
+
+@mixin isControl(
+  $bg-color: constants.$color-secondary,
+  $color: constants.$color-over-secondary,
+  $acc-color: constants.$color-accent
+) {
+  background-color: $bg-color;
+  color: $color;
+  display: block;
+  text-align: center;
+  padding: constants.$spacing-small 0;
+  border-radius: constants.$rounded-small;
+  margin-top: constants.$spacing-small;
+  text-decoration: none;
+  &:hover {
+    background-color: $acc-color;
+  }
+}
+
+@mixin whenIsMobile {
+  @media screen and (max-width: constants.$bp-mobile) {
+    @content;
+  }
+}
+
+@mixin whenIsTablet {
+  @media screen and (max-width: constants.$bp-tablet) {
+    @content;
+  }
+}
+
+body {
+  background-color: constants.$color-background;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  @include whenIsTablet() {
+    max-width: 80%;
+  }
+}
+
+header {
+  background-color: constants.$color-primary;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: constants.$spacing-medium 0;
+  }
+}
+
+.menu {
+  display: flex;
+
+  li {
+    font-weight: bold;
+    margin-left: constants.$spacing-large;
+
+    a {
+      color: constants.$color-over-primary;
+      text-decoration: none;
+    }
+  }
+}
+
+section {
+  padding: constants.$spacing-xxlarge 0;
+}
+
+.products {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 32.66%);
+  column-gap: 1%;
+  row-gap: 4%;
+  width: 100%;
+
+  @include whenIsTablet {
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
+  }
+
+  @include whenIsMobile {
+    display: block;
+  }
+}
+
+.product-item img {
+  width: 100%;
+  border-radius: constants.$rounded-medium;
+  @include whenIsMobile {
+    margin-bottom: 32px;
+  }
+}
+
+.product-button {
+  @include isControl();
+}
