@@ -1,0 +1,1 @@
+import power from"./power";function ಠ_ಠ850(ಠ_ಠ851,ಠ_ಠ852){console.log(power(ಠ_ಠ851,ಠ_ಠ852))}ಠ_ಠ850();

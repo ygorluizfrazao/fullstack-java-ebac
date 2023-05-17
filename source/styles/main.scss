@@ -1,0 +1,5 @@
+@use 'constants';
+
+body {
+    background-color: constants.$color-background;
+}

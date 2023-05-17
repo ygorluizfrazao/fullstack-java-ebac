@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss","constants.scss"],"names":[],"mappings":"AAEA,KACI,iBCHe","file":"../main.css","sourcesContent":["@use 'constants';\r\n\r\nbody {\r\n    background-color: constants.$color-background;\r\n}","$color-background: rgb(124, 87, 32);"]}

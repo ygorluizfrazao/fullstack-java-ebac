@@ -1,0 +1,1 @@
+export default function ಠ_ಠ853(t,e){return Math.pow(t,e)}
